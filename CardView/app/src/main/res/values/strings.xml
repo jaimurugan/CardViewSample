@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="news_one_title">Dallas Police Attack</string>
+    <string name="news_one_desc">The Dallas police attacked the suspect and killed</string>
+</resources>

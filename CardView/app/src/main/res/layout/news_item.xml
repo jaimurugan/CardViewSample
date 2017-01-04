@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <!-- android:clickable="true"  //cardView是否可点击,默认是不可点击的 -->
+    <!-- app:cardCornerRadius="3dp" //圆角 -->
+    <!-- app:cardElevation="8dp" //阴影 -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/news_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/news_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/news_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/news_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_header"
+                android:layout_margin="15dp"
+                android:maxLines="2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_desc"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#00000000"
+                    android:text="SHARE" />
+
+                <Button
+                    android:id="@+id/btn_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:text="READ MORE"
+                    android:textColor="#7AD3E0" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
